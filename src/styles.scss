@@ -1,0 +1,16 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
+// @import "./assets/my-app-widget/my-app-widget.css";
+
+
+.active-link {
+    color: #000 !important;
+    font-weight: 500 !important;
+}
+
+
+div, p, span, h1, h2, h3, h4, h5, input, select, option {
+    font-family: 'Lato', sans-serif;
+}
