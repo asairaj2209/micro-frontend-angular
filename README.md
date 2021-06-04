@@ -1,27 +1,76 @@
-# BaseApp
+# Create Angular Base App
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.2.0.
 
-## Development server
+### Get started
+Angular is a development platform for building mobile and desktop web applications
+using Typescript/JavaScript and other languages.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+### Clone the repo
 
-## Code scaffolding
+```shell
+https://bitbucket.org/apptiumtechnologies/pion-poc/src/master/
+cd Micro-Frontends/Angular/base-app/
+```
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Install npm packages
 
-## Build
+Install the `npm` packages described in the `package.json` and verify that it works:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+```shell
+npm install
+```
 
-## Running unit tests
+### Run the application
+```shell
+ng serve
+```
+Once application run, Navigate to [http://localhost:4200/](http://localhost:4200/) The app will automatically reload if you change any of the source files.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### Build the application
+```shell
+ng build
+```
+The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
-## Running end-to-end tests
+Shut it down manually with `Ctrl-C`.
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
-## Further help
+## Widget Import in same host
+Once widget application is `build` then copy required files from `dist` folder and paste it below path. After that `run` or `build` our base application.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+```shell
+cd Micro-Frontends/Angular/base-app/widgets/
+```
+
+```
+base-app
+├── src
+├── node_modules
+├── package.json
+├── widgets
+│   ├── my-app
+│   ├── my-app-detail
+
+```
+
+Bind the widget in any component
+```shell
+<my-account></my-account>
+```
+
+## Widget Import in different host
+Once widget application is `build` then copy required files path from `dist` folder and paste it `index.html`. After that `run` or `build` our base application.
+```shell
+<link href="https://react-myaccount.netlify.app/static/css/main.css" rel="stylesheet">
+<script type="text/javascript" src="https://react-myaccount.netlify.app/static/js/main.js"></script>
+```
+
+```
+base-app
+├── node_modules
+├── widgets
+├── package.json
+├── src
+│   ├── index.html
+
+```
