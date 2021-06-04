@@ -34,7 +34,6 @@
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "./widgets/my-app/styles.css",
               "./widgets/my-app-detail/styles.css",
-              "./widgets/my-account/main.css",
               "src/styles.scss"              
             ],
             "scripts": [
@@ -44,8 +43,7 @@
               "./widgets/my-app/main.js", 
               "./widgets/my-app/scripts.js",
               "./widgets/my-app-detail/main.js", 
-              "./widgets/my-app-detail/scripts.js",
-              "./widgets/my-account/main.js"       
+              "./widgets/my-app-detail/scripts.js"
             ]
           },
           "configurations": {
