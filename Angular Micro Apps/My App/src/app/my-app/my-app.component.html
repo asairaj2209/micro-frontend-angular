@@ -1,0 +1,43 @@
+<main>
+    <section class="my-lg-4 px-lg-5">
+        <div>
+            <h3><img src="assets/angular-icon.png" alt="Angular Logo"> Manage Apps</h3>
+            <p>View and manage your purchased applications, instances, plans and licenses to better suit your business
+                needs.</p>
+        </div>
+        <div class="my-5">
+            <div class="card shadow-sm" style="width: 12rem;">
+
+                <div class="card-body text-center">
+                    <h5>TOTAL</h5>
+                    <br>
+                    <div class="px-4 py-3">
+                        <h6 class="font-weight-bold">10</h6>
+                        <p>Applications</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="px-lg-5 pb-5">
+        <table class="table table-hover table-bordered">
+            <thead>
+                <tr>
+                    <th>Subscriptions</th>
+                    <th>Instance Name</th>
+                    <th>Subscription ID</th>
+                    <th>Plan</th>
+                </tr>
+
+            </thead>
+            <tbody>
+                <tr *ngFor="let product of products;let i=index">
+                    <td><span class="nav_link" (click)="onNavigatePdtDetail(product)">{{product.subscriptions}}</span></td>
+                    <td>{{product.instanceName}}</td>
+                    <td>{{product.subscriptionID}}</td>
+                    <td>{{product.plan}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+</main>

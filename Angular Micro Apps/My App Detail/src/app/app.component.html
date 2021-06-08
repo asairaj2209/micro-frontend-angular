@@ -1,0 +1,30 @@
+<main>
+    <section class="my-lg-4 px-lg-5">
+        <div>
+            <h6 style="cursor: pointer;" class="text-primary" (click)="onNavigate()"><i class="fa fa-arrow-left" aria-hidden="true"></i> &nbsp;Back to Manage Apps</h6>
+        </div>
+    </section>
+    <section class="px-lg-5 pb-5">
+        <div class="row">
+            <div class="col-lg-6">
+                <h2><img src="assets/angular-icon.png" alt="Angular Logo"> {{appDetail.subscriptions}}</h2>
+                <p>{{appDetail.instanceName}}</p>
+            </div>
+            <div class="col-lg-6">
+                <h5>Subscription ID</h5>
+                <p>{{appDetail.subscriptionID}}</p>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col-lg-6">
+                <div class="card shadow-sm" style="width: 12rem;">
+                    <div class="card-body text-center mt-1">
+                        <h6 class="font-weight-bold">CURRENT PLAN</h6>
+                        <p class="pb-5">{{appDetail.plan}}</p>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
